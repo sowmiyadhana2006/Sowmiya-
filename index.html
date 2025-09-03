@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Portfolio - Sowmiya</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff0f5;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    h1, h2, h3 {
+      margin-bottom: 10px;
+    }
+    a {
+      text-decoration: none;
+    }
+
+    /* Header */
+    header {
+      background: #fff;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      border-radius: 12px;
+      max-width: 600px;
+    }
+    header h1 {
+      color: #e75480;
+    }
+    #typing {
+      font-weight: bold;
+      color: #c71585;
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background: #e75480;
+      color: #fff;
+      border-radius: 25px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #c71585;
+    }
+
+    /* Navbar */
+    nav {
+      background: #222;
+      padding: 15px;
+      text-align: center;
+    }
+    nav a {
+      margin: 10px;
+      padding: 10px 20px;
+      background: #e75480;
+      color: #fff;
+      border-radius: 25px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background: #c71585;
+    }
+
+    /* Section */
+    section {
+      max-width: 900px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: #ffe4e9;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .project-card button {
+      background: #333;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .project-card button:hover {
+      background: #e75480;
+    }
+
+    /* Skills */
+    .skills span {
+      display: inline-block;
+      margin: 5px;
+      padding: 8px 15px;
+      background: #f8c8dc;
+      border-radius: 8px;
+    }
+
+    /* Contact */
+    #contact a {
+      display: inline-block;
+      margin: 8px 0;
+      padding: 10px 15px;
+      background: #e75480;
+      color: #fff;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+    #contact a:hover {
+      background: #c71585;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #222;
+      color: #fff;
+      margin-top: 30px;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 500px;
+      text-align: center;
+    }
+    .close {
+      float: right;
+      font-size: 20px;
+      cursor: pointer;
+      color: #c71585;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Sowmiya</h1>
+    <p>II BCA <br> <span id="typing"></span></p>
+    <a href="#projects" class="btn">Visit My Work</a>
+    <a href="https://github.com/sowmiyadhana2006" target="_blank" class="btn">GitHub</a>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Sowmiya, a II BCA student and passionate web developer specializing in building modern, responsive websites and applications. I enjoy coding clean and efficient code and continuously learning new technologies.</p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio to showcase my skills and projects.</p>
+        <button onclick="openModal('Portfolio Website')">View Project</button>
+      </div>
+      <div class="project-card">
+        <h3>Todo App</h3>
+        <p>A simple and user-friendly task management app built with JavaScript.</p>
+        <button onclick="openModal('Todo App')">View Project</button>
+      </div>
+      <div class="project-card">
+        <h3>Blog Platform</h3>
+        <p>A full-stack blog platform with user authentication and rich text editor.</p>
+        <button onclick="openModal('Blog Platform')">View Project</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>HTML5</span>
+      <span>CSS3</span>
+      <span>JavaScript</span>
+      <span>React</span>
+      <span>Node.js</span>
+      <span>Git</span>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>You can reach me at:</p>
+    <ul>
+      <li>Email: <a href="mailto:sowmiyadhana2006@gmail.com">sowmiyadhana2006@gmail.com</a></li>
+      <li>LinkedIn: <a href="#">Sowmiya II BCA LinkedIn Profile</a></li>
+      <li>GitHub: <a href="https://github.com/sowmiyadhana2006" target="_blank">github.com/sowmiyadhana2006</a></li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Sowmiya II BCA. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="projectModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p>Project details coming soon...</p>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Typing effect
+    const typingText = ["Frontend Web Developer", "JavaScript Enthusiast", "Creative Coder"];
+    let i = 0, j = 0, currentText = "", isDeleting = false;
+    function typeEffect() {
+      currentText = typingText[i];
+      document.getElementById("typing").textContent =
+        isDeleting ? currentText.substring(0, j--) : currentText.substring(0, j++);
+      if (!isDeleting && j === currentText.length + 1) {
+        isDeleting = true;
+        setTimeout(typeEffect, 1000);
+      } else if (isDeleting && j === 0) {
+        isDeleting = false;
+        i = (i + 1) % typingText.length;
+        setTimeout(typeEffect, 300);
+      } else {
+        setTimeout(typeEffect, isDeleting ? 80 : 120);
+      }
+    }
+    typeEffect();
+
+    // Modal functions
+    function openModal(projectName) {
+      document.getElementById("modalTitle").innerText = projectName;
+      document.getElementById("projectModal").style.display = "flex";
+    }
+    function closeModal() {
+      document.getElementById("projectModal").style.display = "none";
+    }
+    window.onclick = function(event) {
+      const modal = document.getElementById("projectModal");
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+  </script>
+</body>
+</html>
